@@ -2,22 +2,20 @@ import React from 'react'
 import { Stack, Box } from '@mui/material'
 import VideoCard from './VideoCard'
 
-const Videos = () => {
+const Videos = ({direction}) => {
   return (
-    <div style={{display:'flex', justifyContent:'space-around', flexWrap:'wrap'}}>
+    <Stack direction={direction || 'row'} flexWrap='wrap' justifyContent='space-evenly' alignItems='start' gap={2}>
+      <Box>
         <VideoCard />
+      </Box>
+      <Box>
         <VideoCard />
+      </Box>
+      <Box>
         <VideoCard />
-        <VideoCard />
-        <VideoCard />
-        <VideoCard />
-        <VideoCard />
-        <VideoCard />
-        <VideoCard />
-        <VideoCard />
-        <VideoCard />
-        <VideoCard />
-    </div>
+      </Box>
+      
+    </Stack>
   )
 }
 
